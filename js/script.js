@@ -232,7 +232,21 @@ window.addEventListener("DOMContentLoaded", function () {
       // от 0 (весь мир) до 19.
       zoom: 14,
       controls: ['geolocationControl', 'zoomControl']
-    });
+    },
+      {
+        suppressMapOpenBlock: true,
+        geolocationControlSize: "large",
+        geolocationControlPosition: { top: "360px", right: "15px" },
+        geolocationControlFloat: 'none',
+        zoomControlSize: "small",
+        zoomControlFloat: "none",
+        zoomControlPosition: { top: "270px", right: "15px" }
+      }
+    );
+
+    myMap.behaviors.disable('scrollZoom');
+
+
     var myPlacemark = new ymaps.Placemark([55.760382812669974, 37.61402491528322], {
     }, {
       // Опции.
@@ -254,8 +268,8 @@ window.addEventListener("DOMContentLoaded", function () {
   class Modal {
     constructor(options) {
       let defaultOptions = {
-        isOpen: () => {},
-        isClose: () => {},
+        isOpen: () => { },
+        isClose: () => { },
       }
       this.options = Object.assign(defaultOptions, options);
       this.modal = document.querySelector('.modal');
@@ -274,10 +288,10 @@ window.addEventListener("DOMContentLoaded", function () {
       ];
       this.events();
     }
-  
+
     events() {
       if (this.modal) {
-        document.addEventListener('click', function(e){
+        document.addEventListener('click', function (e) {
           const clickedElement = e.target.closest('[data-path]');
           if (clickedElement) {
             let target = clickedElement.dataset.path;
@@ -287,78 +301,78 @@ window.addEventListener("DOMContentLoaded", function () {
             this.open();
             return;
           }
-  
+
           if (e.target.closest('.modal-close')) {
             this.close();
             return;
           }
         }.bind(this));
-  
-        window.addEventListener('keydown', function(e) {
+
+        window.addEventListener('keydown', function (e) {
           if (e.keyCode == 27) {
             if (this.isOpen) {
               this.close();
             }
           }
-  
+
           if (e.keyCode == 9 && this.isOpen) {
             this.focusCatch(e);
             return;
           }
-  
+
         }.bind(this));
-  
-        this.modal.addEventListener('click', function(e) {
+
+        this.modal.addEventListener('click', function (e) {
           if (!e.target.classList.contains('modal__container') && !e.target.closest('.modal__container') && this.isOpen) {
             this.close();
           }
         }.bind(this));
       }
     }
-  
+
     open() {
       this.previousActiveElement = document.activeElement;
-  
+
       this.modal.style.setProperty('--transition-time', `${this.speed / 1000}s`);
       this.modal.classList.add('is-open');
       this.disableScroll();
       this.modalContainer.classList.add('modal-open');
-  
+
       setTimeout(() => {
         this.options.isOpen(this);
         this.isOpen = true;
         this.focusTrap();
       }, this.speed);
     }
-  
+
     close() {
       if (this.modalContainer) {
         this.modal.classList.remove('is-open');
         this.modalContainer.classList.remove('modal-open');
-  
+
         this.enableScroll();
         this.options.isClose(this);
         this.isOpen = false;
         this.focusTrap();
       }
     }
-  
+
     focusCatch(e) {
       const focusable = this.modalContainer.querySelectorAll(this.focusElements);
       const focusArray = Array.prototype.slice.call(focusable);
       const focusedIndex = focusArray.indexOf(document.activeElement);
-  
+
       if (e.shiftKey && focusedIndex === 0) {
         focusArray[focusArray.length - 1].focus();
         e.preventDefault();
       }
-  
+
       if (!e.shiftKey && focusedIndex === focusArray.length - 1) {
         focusArray[0].focus();
         e.preventDefault();
       }
     }
-  
+
     focusTrap() {
       const focusable = this.modalContainer.querySelectorAll(this.focusElements);
       if (this.isOpen) {
@@ -367,7 +381,7 @@ window.addEventListener("DOMContentLoaded", function () {
         this.previousActiveElement.focus();
       }
     }
-  
+
     disableScroll() {
       let pagePosition = window.scrollY;
       this.lockPadding();
@@ -375,7 +389,7 @@ window.addEventListener("DOMContentLoaded", function () {
       document.body.dataset.position = pagePosition;
       document.body.style.top = -pagePosition + 'px';
     }
-  
+
     enableScroll() {
       let pagePosition = parseInt(document.body.dataset.position, 10);
       this.unlockPadding();
@@ -384,7 +398,7 @@ window.addEventListener("DOMContentLoaded", function () {
       window.scroll({ top: pagePosition, left: 0 });
       document.body.removeAttribute('data-position');
     }
-  
+
     lockPadding() {
       let paddingOffset = window.innerWidth - document.body.offsetWidth + 'px';
       this.fixBlocks.forEach((el) => {
@@ -392,7 +406,7 @@ window.addEventListener("DOMContentLoaded", function () {
       });
       document.body.style.paddingRight = paddingOffset;
     }
-  
+
     unlockPadding() {
       this.fixBlocks.forEach((el) => {
         el.style.paddingRight = '0px';
@@ -400,6 +414,6 @@ window.addEventListener("DOMContentLoaded", function () {
       document.body.style.paddingRight = '0px';
     }
   }
-  
+
   const modal = new Modal({});
 });

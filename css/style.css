@@ -1837,6 +1837,9 @@ background: var(--amethyst-color);
   outline: none;
   background: transparent;
 }
+.modal__btn-close:focus{
+  outline: none;
+}
 .modal__close-icon path{
   transition: fill .3s ease;
 }
