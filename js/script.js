@@ -86,7 +86,25 @@ window.addEventListener("DOMContentLoaded", function () {
       type: 'fraction',
     },
     keyboard: true,
-
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 34,
+        slidesPerGroup: 2,
+      },
+      // when window width is >= 1231px
+      1231: {
+        slidesPerView: 3,
+        slidesPerGroup: 3,
+        spaceBetween: 50
+      }
+    }
   });
 
   // catalog accordion
@@ -125,6 +143,28 @@ window.addEventListener("DOMContentLoaded", function () {
       nextEl: '.events__button-next',
       prevEl: '.events__button-prev',
     },
+    pagination: {
+      el: '.events__slider-pagination',
+      clickable: true,
+    },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 3,
+        spaceBetween: 27,
+        slidesPerGroup: 3,
+      },
+      // when window width is >= 1231px
+      1231: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      }
+    }
 
   });
 
@@ -161,6 +201,24 @@ window.addEventListener("DOMContentLoaded", function () {
       nextEl: '.projects__slider-btn-next',
       prevEl: '.projects__slider-btn-prev',
     },
+    breakpoints: {
+      // when window width is >= 320px
+      320: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+      // when window width is >= 480px
+      480: {
+        slidesPerView: 2,
+        spaceBetween: 50,
+        
+      },
+      // when window width is >= 1231px
+      1231: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+      }
+    }
 
 
   });
@@ -292,7 +350,7 @@ window.addEventListener("DOMContentLoaded", function () {
     events() {
       if (this.modal) {
         document.addEventListener('click', function (e) {
-          const clickedElement = e.target.closest('[data-path]');
+          const clickedElement = e.target.closest('[data-role="show-modal"]');
           if (clickedElement) {
             let target = clickedElement.dataset.path;
             let speed = clickedElement.dataset.speed;
@@ -415,5 +473,28 @@ window.addEventListener("DOMContentLoaded", function () {
     }
   }
 
+  // modal-window
   const modal = new Modal({});
+
+  // burger-menu
+  const burgerBtn = document.querySelector('.burger')
+
+  burgerBtn.addEventListener('click', () =>{
+    document.querySelector('.header__nav').classList.toggle('header__nav-open');
+    burgerBtn.classList.toggle('burger-active')
+  })
+  // search-form-mobile
+  // открытие
+  document.querySelector('.header__btn-search-mobile').addEventListener('click', () =>{
+    document.querySelector('.search-form-mobile').classList.add('search-form-mobile-open');
+    document.querySelector('.header__btn-search-mobile').classList.add('header__btn-search-mobile-disable');
+  });
+
+  // закрытие
+  document.querySelector('.search-form-mobile__btn-close').addEventListener('click', () =>{
+    document.querySelector('.search-form-mobile').classList.remove('search-form-mobile-open');
+    document.querySelector('.header__btn-search-mobile').classList.remove('header__btn-search-mobile-disable');
+  
+  });
+
 });
