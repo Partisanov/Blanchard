@@ -72,10 +72,12 @@ window.addEventListener("DOMContentLoaded", function () {
   const galarySwiper = new Swiper('.galary__slider', {
     // Optional parameters
     //кол-во слайдов для показа
-    slidesPerView: 3,
-    slidesPerGroup: 3,
-    // отступ между слайдами
-    spaceBetween: 50,
+    slidesPerView: 1,
+
+    grid: {
+      rows: 1,
+      fill: 'row'
+    },
     // Navigation arrows
     navigation: {
       nextEl: '.swiper-button-next',
@@ -87,19 +89,20 @@ window.addEventListener("DOMContentLoaded", function () {
     },
     keyboard: true,
     breakpoints: {
-      // when window width is >= 320px
-      320: {
+      // when window width is >= 610px
+      611: {
         slidesPerView: 2,
-        spaceBetween: 20
+        slidesPerGroup: 2,
+        spaceBetween: 38
       },
-      // when window width is >= 480px
-      480: {
+      // when window width is >= 970px
+      971: {
         slidesPerView: 2,
         spaceBetween: 34,
         slidesPerGroup: 2,
       },
-      // when window width is >= 1231px
-      1231: {
+      // when window width is >= 1280px
+      1281: {
         slidesPerView: 3,
         slidesPerGroup: 3,
         spaceBetween: 50
@@ -135,9 +138,11 @@ window.addEventListener("DOMContentLoaded", function () {
   const eventsSwiper = new Swiper('.events__slider', {
     // Optional parameters
     //кол-во слайдов для показа
-    slidesPerView: 3,
-    // отступ между слайдами
-    spaceBetween: 50,
+    slidesPerView: 1,
+    grid: {
+      rows: 1,
+      fill: 'row'
+    },
     // Navigation arrows
     navigation: {
       nextEl: '.events__button-next',
@@ -148,21 +153,22 @@ window.addEventListener("DOMContentLoaded", function () {
       clickable: true,
     },
     breakpoints: {
-      // when window width is >= 320px
-      320: {
+      // when window width is >= 610px
+      611: {
         slidesPerView: 2,
-        spaceBetween: 20
+        slidesPerGroup: 2,
+        spaceBetween: 34
       },
-      // when window width is >= 480px
-      480: {
+      // when window width is >= 970px
+      971: {
         slidesPerView: 3,
-        spaceBetween: 27,
         slidesPerGroup: 3,
+        spaceBetween: 27
       },
-      // when window width is >= 1231px
-      1231: {
+      // when window width is >= 1280px
+      1281: {
         slidesPerView: 3,
-        spaceBetween: 50,
+        spaceBetween: 50
       }
     }
 
@@ -193,28 +199,29 @@ window.addEventListener("DOMContentLoaded", function () {
   const projectsSwiper = new Swiper('.projects__slider', {
     // Optional parameters
     //кол-во слайдов для показа
-    slidesPerView: 3,
-    // отступ между слайдами
-    spaceBetween: 50,
-    // Navigation arrows
+    slidesPerView: 1,
+    grid: {
+      rows: 1,
+      fill: 'row'
+    },
     navigation: {
       nextEl: '.projects__slider-btn-next',
       prevEl: '.projects__slider-btn-prev',
     },
     breakpoints: {
       // when window width is >= 320px
-      320: {
+      611: {
         slidesPerView: 2,
-        spaceBetween: 20
+        spaceBetween: 34
       },
       // when window width is >= 480px
-      480: {
+      971: {
         slidesPerView: 2,
         spaceBetween: 50,
-        
+
       },
       // when window width is >= 1231px
-      1231: {
+      1281: {
         slidesPerView: 3,
         spaceBetween: 50,
       }
@@ -479,22 +486,20 @@ window.addEventListener("DOMContentLoaded", function () {
   // burger-menu
   const burgerBtn = document.querySelector('.burger')
 
-  burgerBtn.addEventListener('click', () =>{
+  burgerBtn.addEventListener('click', () => {
     document.querySelector('.header__nav').classList.toggle('header__nav-open');
     burgerBtn.classList.toggle('burger-active')
   })
   // search-form-mobile
   // открытие
-  document.querySelector('.header__btn-search-mobile').addEventListener('click', () =>{
+  document.querySelector('.header__btn-search-mobile').addEventListener('click', () => {
     document.querySelector('.search-form-mobile').classList.add('search-form-mobile-open');
     document.querySelector('.header__btn-search-mobile').classList.add('header__btn-search-mobile-disable');
-  });
+  })
 
   // закрытие
-  document.querySelector('.search-form-mobile__btn-close').addEventListener('click', () =>{
+  document.querySelector('.search-form-mobile__btn-close').addEventListener('click', () => {
     document.querySelector('.search-form-mobile').classList.remove('search-form-mobile-open');
     document.querySelector('.header__btn-search-mobile').classList.remove('header__btn-search-mobile-disable');
-  
-  });
-
+  })
 });
