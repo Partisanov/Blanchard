@@ -185,7 +185,7 @@
       </div>
       <div class="container hero__container">
         <div class="hero__content">
-          <h1 class="hero__title">Прикоснитесь к прекрасному</h1>
+          <h1 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
           <p class="hero__description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
             создаёт предпосылки для новых предложений.</p>
           <button class="hero__btn">Подписаться на рассылку</button>
@@ -209,7 +209,7 @@
       <div class="container galary__container">
         <div class="galary__content">
           <h2 class="galary__title">Галерея</h2>
-          <p class="galary__subtitle">Фильтр:</p>
+          <h3 class="galary__subtitle">Фильтр:</h3>
           <select name="select is-open is-active" id="galaryFilter" aria-label="Выбор изображения">
             <option value="Живопись">Живопись</option>
             <option value="Рисунок">Рисунок</option>
@@ -241,42 +241,42 @@
         <div class="swiper galary__slider">
           <!-- Additional required wrapper -->
           <div class="galary__swiper-navigation">
-            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-prev" aria-label="Предыдущий слайд"></div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-next"></div>
+            <div class="swiper-button-next" aria-label="Следующий слайд"></div>
           </div>
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide galary__slide"><a href="#" class="galary__link" data-path="first-modal"
+            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
                 data-role="show-modal">
                 <picture><img class="galary__img" src="./img/galary/slide1.jpg"
                     alt="картина Карла Брюллова - Итальянский полдень"></picture>
-              </a></div>
-            <div class="swiper-slide galary__slide"><a href="#" class="galary__link" data-path="first-modal"
+                </button></div>
+            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
                 data-role="show-modal">
                 <picture><img class="galary__img" src="./img/galary/slide2.jpg" alt="картина Фрагонара - Утес слепого">
                 </picture>
-              </a></div>
-            <div class="swiper-slide galary__slide"><a href="#" class="galary__link" data-path="first-modal"
+              </button></div>
+            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
                 data-role="show-modal">
                 <picture><img class="galary__img" src="./img/galary/slide3.jpg"
                     alt="картина Питера Пауля Рубенса - Самсон и Далила"></picture>
-              </a></div>
-            <div class="swiper-slide galary__slide"><a href="#" class="galary__link" data-path="first-modal"
+              </button></div>
+            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
                 data-role="show-modal">
                 <picture><img class="galary__img" src="./img/galary/slide4.jpg"
                     alt="картина Яна ван Хейсума - Цветы и плоды"></picture>
-              </a></div>
-            <div class="swiper-slide galary__slide"><a href="#" class="galary__link" data-path="first-modal"
+              </button></div>
+            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
                 data-role="show-modal">
                 <picture><img class="galary__img" src="./img/galary/slide5.jpg"
                     alt="картина Генриха Семирадского – Игра в кости"></picture>
-              </a></div>
-            <div class="swiper-slide galary__slide"><a href="#" class="galary__link" data-path="first-modal"
+              </button></div>
+            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
                 data-role="show-modal">
                 <picture><img class="galary__img" src="./img/galary/slide6.jpg"
                     alt="картина Ивана Крамского - незнакомка"></picture>
-              </a></div>
+              </button></div>
           </div>
         </div>
       </div>
@@ -293,6 +293,7 @@
           <div class="catalog__painter painter">
             <div class="painter__item" data-target="undefind">
               <picture>
+                <source srcset="img/catalog/undefind-320.jpg" media="(max-width: 680px)">
                 <source srcset="img/catalog/undefind-768.jpg" media="(max-width: 970px)">
                 <source srcset="img/catalog/undefind-1024.jpg" media="(max-width: 1280px)">
                 <img class="painter__img" src="img/catalog/undefind-1920.jpg" alt="Фото художника отсутствует">
@@ -580,6 +581,7 @@
               <!-- Slides -->
               <li class="swiper-slide events__item">
                 <picture>
+                  <source srcset="img/events/event-320-1.jpg" media="(max-width: 680px)">
                   <source srcset="img/events/event-768-1.jpg" media="(max-width: 970px)">
                   <source srcset="img/events/event-1024-1.jpg" media="(max-width: 1280px)">
                   <img src="img/events/event-1920-1.jpg" alt="Событие Книжная гравюра в живом восприятии"
@@ -596,6 +598,7 @@
               </li>
               <li class="swiper-slide events__item">
                 <picture>
+                  <source srcset="img/events/event-320-2.jpg" media="(max-width: 680px)">
                   <source srcset="img/events/event-768-2.jpg" media="(max-width: 970px)">
                   <source srcset="img/events/event-1024-2.jpg" media="(max-width: 1280px)">
                   <img src="img/events/event-1920-2.jpg"
@@ -612,6 +615,7 @@
               </li>
               <li class="swiper-slide events__item">
                 <picture>
+                  <source srcset="img/events/event-320-3.jpg" media="(max-width: 680px)">
                   <source srcset="img/events/event-768-3.jpg" media="(max-width: 970px)">
                   <source srcset="img/events/event-1024-3.jpg" media="(max-width: 1280px)">
                   <img src="img/events/event-1920-3.jpg" alt="Событие Выставка «Формация 2020»" class="events__img">
@@ -627,6 +631,7 @@
               </li>
               <li class="swiper-slide events__item">
                 <picture>
+                  <source srcset="img/events/event-320-4.jpg" media="(max-width: 680px)">
                   <source srcset="img/events/event-768-4.jpg" media="(max-width: 970px)">
                   <source srcset="img/events/event-1024-4.jpg" media="(max-width: 1280px)">
                   <img src="img/events/event-1920-4.jpg"
@@ -643,6 +648,7 @@
               </li>
               <li class="swiper-slide events__item">
                 <picture>
+                  <source srcset="img/events/event-320-5.jpg" media="(max-width: 680px)">
                   <source srcset="img/events/event-768-5.jpg" media="(max-width: 970px)">
                   <source srcset="img/events/event-1024-5.jpg" media="(max-width: 1280px)">
                   <img src="img/events/event-1920-5.jpg" alt="Событие Третьяковка на Крымском валу" class="events__img">
@@ -691,7 +697,7 @@
               <!-- Slides -->
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-1.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-1.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-1.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-1.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-1.png" alt="Логотип freelands foundation"
@@ -700,7 +706,7 @@
                 </a></div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-2.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-2.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-2.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-2.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-2.png" alt="Логотип ICA" class="projects__swiper-slide-img">
@@ -709,7 +715,7 @@
               </div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-3.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-3.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-3.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-3.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-3.png" alt="Логотип workhouse"
@@ -718,7 +724,7 @@
                 </a></div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-4.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-4.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-4.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-4.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-4.png" alt="Логотип 1849" class="projects__swiper-slide-img">
@@ -727,7 +733,7 @@
               </div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-5.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-5.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-5.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-5.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-5.png" alt="Логотип hiscox" class="projects__swiper-slide-img">
@@ -736,7 +742,7 @@
               </div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-6.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-6.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-6.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-6.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-6.png" alt="Логотип canden" class="projects__swiper-slide-img">
@@ -745,7 +751,7 @@
               </div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-7.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-7.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-7.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-7.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-7.png" alt="Логотип stassen" class="projects__swiper-slide-img">
@@ -754,7 +760,7 @@
               </div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-8.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-8.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-8.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-8.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-8.png" alt="Логотип watts" class="projects__swiper-slide-img">
@@ -763,7 +769,7 @@
               </div>
               <div class="swiper-slide"><a href="#" class="projects__swiper-slide-link">
                   <picture>
-                    <source srcset="img/projects/partners-img-320-9.png" media="(max-width: 610px)">
+                    <source srcset="img/projects/partners-img-320-9.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-9.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-9.png" media="(max-width: 1280px)">
                     <img src="img/projects/partners-img-1920-9.png" alt="Логотип esad" class="projects__swiper-slide-img">
@@ -795,10 +801,10 @@
               <input type="tel" class="form-contacts__input form-control" placeholder="Телефон*" autocomplete="off"
                 name="tel" id="tel" data-validate-field="tel" />
             </div>
-            <button class="btn btn-primary form-contacts__btn" id="submit-btn">Заказать обратный звонок</button>
+            <button class="btn btn-primary form-contacts__btn" id="submit-btn">Заказать<span> обратный звонок</span></button>
           </form>
 
-
+ 
           <div class="contacts__socials socials">
             <h3 class="socials__title">Связаться в один клик</h3>
             <ul class="socials__list">
@@ -887,7 +893,7 @@
   </footer>
   <div class="modal">
     <div class="modal__container" data-target="first-modal">
-      <button class="modal__btn-close modal-close">
+      <button class="modal__btn-close modal-close" aria-label="закрыть">
         <svg class="modal__close-icon" width="16" height="16" viewBox="0 0 16 16" fill="none"
           xmlns="http://www.w3.org/2000/svg">
           <path fill-rule="evenodd" clip-rule="evenodd"
@@ -900,6 +906,8 @@
       <div class="modal__content">
         <div class="modal__img-wrap">
           <picture>
+            <source srcset="img/modal/modal-320.jpg" media="(max-width: 680px)">
+            <source srcset="img/modal/modal-768.jpg" media="(max-width: 970px)">
             <source srcset="img/modal/modal-1024.jpg" media="(max-width: 1280px)">
             <img class="modal__img" src="./img/modal/modal-1920.jpg"
               alt="картина Казимира Малевича - Женщина с граблями">

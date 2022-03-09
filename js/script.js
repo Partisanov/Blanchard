@@ -87,10 +87,15 @@ window.addEventListener("DOMContentLoaded", function () {
       el: '.swiper-pagination',
       type: 'fraction',
     },
+    a11y: {
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+      paginationBulletMessage: 'Переход к слайду {{index}}'
+    },
     keyboard: true,
     breakpoints: {
       // when window width is >= 610px
-      611: {
+      681: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 38
@@ -152,9 +157,14 @@ window.addEventListener("DOMContentLoaded", function () {
       el: '.events__slider-pagination',
       clickable: true,
     },
+    a11y: {
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+      paginationBulletMessage: 'Переход к слайду {{index}}'
+    },
     breakpoints: {
       // when window width is >= 610px
-      611: {
+      681: {
         slidesPerView: 2,
         slidesPerGroup: 2,
         spaceBetween: 34
@@ -208,9 +218,13 @@ window.addEventListener("DOMContentLoaded", function () {
       nextEl: '.projects__slider-btn-next',
       prevEl: '.projects__slider-btn-prev',
     },
+    a11y: {
+      prevSlideMessage: 'Предыдущий слайд',
+      nextSlideMessage: 'Следующий слайд',
+    },
     breakpoints: {
       // when window width is >= 320px
-      611: {
+      681: {
         slidesPerView: 2,
         spaceBetween: 34
       },
