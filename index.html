@@ -174,6 +174,7 @@
   </header>
   <main>
     <section class="hero">
+      <h1 class="visually-hidden">Blanchard - художественная галерея</h1>
       <div class="hero__swiper hero__slider">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper ">
@@ -185,7 +186,7 @@
       </div>
       <div class="container hero__container">
         <div class="hero__content">
-          <h1 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h1>
+          <h2 class="hero__title">Прикоснитесь к&nbsp;прекрасному</h2>
           <p class="hero__description">Мы вынуждены отталкиваться от того, что реализация намеченных плановых заданий
             создаёт предпосылки для новых предложений.</p>
           <button class="hero__btn">Подписаться на рассылку</button>
@@ -205,17 +206,17 @@
           набирают популярность среди определенных слоев населения, а&nbsp;значит, должны быть разоблачены.</p>
       </div>
     </section>
-    <section class="galary" id="galary">
-      <div class="container galary__container">
-        <div class="galary__content">
-          <h2 class="galary__title">Галерея</h2>
-          <h3 class="galary__subtitle">Фильтр:</h3>
-          <select name="select is-open is-active" id="galaryFilter" aria-label="Выбор изображения">
+    <section class="gallery" id="gallery">
+      <div class="container gallery__container">
+        <div class="gallery__content">
+          <h2 class="gallery__title">Галерея</h2>
+          <h3 class="gallery__subtitle">Фильтр:</h3>
+          <select name="select is-open is-active" id="galleryFilter" aria-label="Выбор изображения">
             <option value="Живопись">Живопись</option>
             <option value="Рисунок">Рисунок</option>
             <option value="Скульптура">Скульптура</option>
           </select>
-          <div class="galary__checkbox checkbox">
+          <div class="gallery__checkbox checkbox">
             <ul class="checkbox__list">
               <li class="checkbox__item">
                 <label for="XIX-century" class="checkbox__label" tabindex="0" aria-label="Девятнадцатый век">
@@ -238,43 +239,44 @@
             </ul>
           </div>
         </div>
-        <div class="swiper galary__slider">
+        <div class="swiper gallery__slider">
           <!-- Additional required wrapper -->
-          <div class="galary__swiper-navigation">
-            <div class="swiper-button-prev" aria-label="Предыдущий слайд"></div>
+          <div class="gallery__swiper-navigation">
+            <div class="swiper-button-prev"></div>
             <div class="swiper-pagination"></div>
-            <div class="swiper-button-next" aria-label="Следующий слайд"></div>
+            <div class="swiper-button-next"></div>
           </div>
           <div class="swiper-wrapper">
             <!-- Slides -->
-            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
+            <div class="swiper-slide gallery__slide"><button class="gallery__btn" data-path="first-modal"
                 data-role="show-modal">
-                <picture><img class="galary__img" src="./img/galary/slide1.jpg"
+                <picture><img class="gallery__img" src="./img/gallery/slide1.jpg"
                     alt="картина Карла Брюллова - Итальянский полдень"></picture>
-                </button></div>
-            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
+              </button></div>
+            <div class="swiper-slide gallery__slide"><button class="gallery__btn" data-path="first-modal"
                 data-role="show-modal">
-                <picture><img class="galary__img" src="./img/galary/slide2.jpg" alt="картина Фрагонара - Утес слепого">
+                <picture><img class="gallery__img" src="./img/gallery/slide2.jpg"
+                    alt="картина Фрагонара - Утес слепого">
                 </picture>
               </button></div>
-            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
+            <div class="swiper-slide gallery__slide"><button class="gallery__btn" data-path="first-modal"
                 data-role="show-modal">
-                <picture><img class="galary__img" src="./img/galary/slide3.jpg"
+                <picture><img class="gallery__img" src="./img/gallery/slide3.jpg"
                     alt="картина Питера Пауля Рубенса - Самсон и Далила"></picture>
               </button></div>
-            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
+            <div class="swiper-slide gallery__slide"><button class="gallery__btn" data-path="first-modal"
                 data-role="show-modal">
-                <picture><img class="galary__img" src="./img/galary/slide4.jpg"
+                <picture><img class="gallery__img" src="./img/gallery/slide4.jpg"
                     alt="картина Яна ван Хейсума - Цветы и плоды"></picture>
               </button></div>
-            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
+            <div class="swiper-slide gallery__slide"><button class="gallery__btn" data-path="first-modal"
                 data-role="show-modal">
-                <picture><img class="galary__img" src="./img/galary/slide5.jpg"
+                <picture><img class="gallery__img" src="./img/gallery/slide5.jpg"
                     alt="картина Генриха Семирадского – Игра в кости"></picture>
               </button></div>
-            <div class="swiper-slide galary__slide"><button class="galary__btn" data-path="first-modal"
+            <div class="swiper-slide gallery__slide"><button class="gallery__btn" data-path="first-modal"
                 data-role="show-modal">
-                <picture><img class="galary__img" src="./img/galary/slide6.jpg"
+                <picture><img class="gallery__img" src="./img/gallery/slide6.jpg"
                     alt="картина Ивана Крамского - незнакомка"></picture>
               </button></div>
           </div>
@@ -298,7 +300,7 @@
                 <source srcset="img/catalog/undefind-1024.jpg" media="(max-width: 1280px)">
                 <img class="painter__img" src="img/catalog/undefind-1920.jpg" alt="Фото художника отсутствует">
               </picture>
-              <h4 class="painter__title">Что мы о нём знаем?</h4>
+              <h3 class="painter__title">Что мы о нём знаем?</h3>
               <p class="painter__description">Пока ничего... Зато мы точно знаем, что в галерее есть на что посмотреть!
               </p>
               <a href="#" class="painter__link">В галерею</a>
@@ -309,7 +311,7 @@
                 <img class="painter__img" src="img/catalog/1400-1499/domeniko-girlandayo.jpg"
                   alt="портрет Доменико Гирландайо">
               </picture>
-              <h4 class="painter__title">Доменико Гирландайо</h4>
+              <h3 class="painter__title">Доменико Гирландайо</h3>
               <span class="painter__years-life">2 июня 1448 — 11 января 1494.</span>
               <p class="painter__description">
                 Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
@@ -709,7 +711,8 @@
                     <source srcset="img/projects/partners-img-320-2.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-2.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-2.png" media="(max-width: 1280px)">
-                    <img src="img/projects/partners-img-1920-2.png" alt="Логотип ICA" class="projects__swiper-slide-img">
+                    <img src="img/projects/partners-img-1920-2.png" alt="Логотип ICA"
+                      class="projects__swiper-slide-img">
                   </picture>
                 </a>
               </div>
@@ -727,7 +730,8 @@
                     <source srcset="img/projects/partners-img-320-4.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-4.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-4.png" media="(max-width: 1280px)">
-                    <img src="img/projects/partners-img-1920-4.png" alt="Логотип 1849" class="projects__swiper-slide-img">
+                    <img src="img/projects/partners-img-1920-4.png" alt="Логотип 1849"
+                      class="projects__swiper-slide-img">
                   </picture>
                 </a>
               </div>
@@ -736,7 +740,8 @@
                     <source srcset="img/projects/partners-img-320-5.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-5.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-5.png" media="(max-width: 1280px)">
-                    <img src="img/projects/partners-img-1920-5.png" alt="Логотип hiscox" class="projects__swiper-slide-img">
+                    <img src="img/projects/partners-img-1920-5.png" alt="Логотип hiscox"
+                      class="projects__swiper-slide-img">
                   </picture>
                 </a>
               </div>
@@ -745,7 +750,8 @@
                     <source srcset="img/projects/partners-img-320-6.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-6.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-6.png" media="(max-width: 1280px)">
-                    <img src="img/projects/partners-img-1920-6.png" alt="Логотип canden" class="projects__swiper-slide-img">
+                    <img src="img/projects/partners-img-1920-6.png" alt="Логотип canden"
+                      class="projects__swiper-slide-img">
                   </picture>
                 </a>
               </div>
@@ -754,7 +760,8 @@
                     <source srcset="img/projects/partners-img-320-7.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-7.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-7.png" media="(max-width: 1280px)">
-                    <img src="img/projects/partners-img-1920-7.png" alt="Логотип stassen" class="projects__swiper-slide-img">
+                    <img src="img/projects/partners-img-1920-7.png" alt="Логотип stassen"
+                      class="projects__swiper-slide-img">
                   </picture>
                 </a>
               </div>
@@ -763,7 +770,8 @@
                     <source srcset="img/projects/partners-img-320-8.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-8.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-8.png" media="(max-width: 1280px)">
-                    <img src="img/projects/partners-img-1920-8.png" alt="Логотип watts" class="projects__swiper-slide-img">
+                    <img src="img/projects/partners-img-1920-8.png" alt="Логотип watts"
+                      class="projects__swiper-slide-img">
                   </picture>
                 </a>
               </div>
@@ -772,7 +780,8 @@
                     <source srcset="img/projects/partners-img-320-9.png" media="(max-width: 680px)">
                     <source srcset="img/projects/partners-img-768-9.png" media="(max-width: 970px)">
                     <source srcset="img/projects/partners-img-1024-9.png" media="(max-width: 1280px)">
-                    <img src="img/projects/partners-img-1920-9.png" alt="Логотип esad" class="projects__swiper-slide-img">
+                    <img src="img/projects/partners-img-1920-9.png" alt="Логотип esad"
+                      class="projects__swiper-slide-img">
                   </picture>
                 </a>
               </div>
@@ -789,22 +798,24 @@
             <h3 class="adress__title">Шоурум №4</h3>
             <p class="adress__description">Леонтьевский переулок, дом 5/1</p>
           </div>
-
           <form action="#" class="contacts__form form-contacts" id="form" autocomplete="off">
-            <div class="form-contacts__field ">
-              <label class="form-contacts__label" for="name"></label>
-              <input type="text" class="form-contacts__input form-control" placeholder="Имя*" autocomplete="off"
-                name="name" id="name" data-validate-field="name" />
+            <div class="form-contacts__fields">
+              <div class="form-contacts__field ">
+                <label class="form-contacts__label" for="name"></label>
+                <input type="text" class="form-contacts__input form-control" placeholder="Имя*" autocomplete="off"
+                  name="name" id="name" data-validate-field="name" />
+              </div>
+              <div class="form-contacts__field">
+                <label class="form-contacts__label" for="tel"></label>
+                <input type="tel" class="form-contacts__input form-control" placeholder="Телефон*" autocomplete="off"
+                  name="tel" id="tel" data-validate-field="tel" />
+              </div>
             </div>
-            <div class="form-contacts__field">
-              <label class="form-contacts__label" for="tel"></label>
-              <input type="tel" class="form-contacts__input form-control" placeholder="Телефон*" autocomplete="off"
-                name="tel" id="tel" data-validate-field="tel" />
-            </div>
-            <button class="btn btn-primary form-contacts__btn" id="submit-btn">Заказать<span> обратный звонок</span></button>
+            <button class="btn btn-primary form-contacts__btn" id="submit-btn">Заказать<span> обратный
+                звонок</span></button>
           </form>
 
- 
+
           <div class="contacts__socials socials">
             <h3 class="socials__title">Связаться в один клик</h3>
             <ul class="socials__list">

@@ -57,8 +57,8 @@ window.addEventListener("DOMContentLoaded", function () {
     },
 
   });
-  // galary-gropdown
-  const element = document.querySelector('#galaryFilter');
+  // gallery-gropdown
+  const element = document.querySelector('#galleryFilter');
   const choices = new Choices(element, {
     searchEnabled: false,
     itemSelectText: '',
@@ -68,8 +68,8 @@ window.addEventListener("DOMContentLoaded", function () {
   let ariaLabel = element.getAttribute('aria-label');
   element.closest('.choices').setAttribute('aria-label', ariaLabel);
 
-  // galary-swiper
-  const galarySwiper = new Swiper('.galary__slider', {
+  // gallery-swiper
+  const gallerySwiper = new Swiper('.gallery__slider', {
     // Optional parameters
     //кол-во слайдов для показа
     slidesPerView: 1,
