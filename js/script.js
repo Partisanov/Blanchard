@@ -114,6 +114,15 @@ window.addEventListener("DOMContentLoaded", function () {
       }
     }
   });
+  //catalog mobile scroll
+  function setScrollitoView(top) {
+    const selectedItem = document.querySelector('.painter')
+    selectedItem.scrollIntoView({
+      block: "center",
+      behavior: "smooth"
+    });
+  }
+
 
   // catalog accordion
   $(".accordion").accordion({
@@ -127,6 +136,10 @@ window.addEventListener("DOMContentLoaded", function () {
   document.querySelectorAll('.accordion__painter-btn').forEach(function (tabsBtn) {
     tabsBtn.addEventListener('click', function (e) {
       const path = e.currentTarget.dataset.path;
+      const mainElementWidth = document.documentElement.clientWidth;
+      if(mainElementWidth <= 680){
+        setScrollitoView()
+      }
       document.querySelectorAll('.accordion__painter-btn').forEach(function (btn) {
         btn.classList.remove('accordion__painter-btn--active')
       });

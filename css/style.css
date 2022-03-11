@@ -1228,7 +1228,7 @@ button{
 }
 .gallery__slider .swiper-button-next.swiper-button-disabled,
 .gallery__slider .swiper-button-prev.swiper-button-disabled {
-  background: var(--dark-gray);
+  background: #b0b0b0;
   opacity: 1;
 }
 
